@@ -142,7 +142,7 @@ def add_review(request):
     if (not request.user.is_anonymous):
         data = json.loads(request.body)
         try:
-            response = post_review(data)
+            # response = post_review(data)
             return JsonResponse({"status": 200})
         except Exception as err:
             print(f"Unexpected {err=}, {type(err)=}")
